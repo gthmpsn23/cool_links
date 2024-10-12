@@ -14,6 +14,12 @@ const shortUrlSchema = new mongoose.Schema({
     required: true,
     default: () => nanoid(10),
   },
+  customAlias:
+  {
+    type: String,
+    unqiue: true,
+    spares: true
+  },
   clicks: {
     type: Number,
     required: true,
